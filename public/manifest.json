@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "HyperLink",
+  "version": "0.1",
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "browser_action": {},
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["/static/css/main.css"],
+      "js": ["/static/js/main.js"]
+    }
+  ],
+  "web_accessible_resources": ["/static/css/content.css"],
+  "content_security_policy": "script-src 'self' 'sha256-GgRxrVOKNdB4LrRsVPDSbzvfdV4UqglmviH9GoBJ5jk='; object-src 'self'"
+}
