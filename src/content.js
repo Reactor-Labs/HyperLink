@@ -3,7 +3,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import Frame, { FrameContextConsumer } from "react-frame-component";
+import CssBaseline from "@material-ui/core/CssBaseline";
 import "./content.css";
+import App from "./App";
+
+var styles = {
+  border: "1px solid",
+  width: "100%",
+  height: "100%",
+};
 
 class Main extends React.Component {
   render() {
@@ -16,14 +24,15 @@ class Main extends React.Component {
             href={chrome.runtime.getURL("/static/css/content.css")}
           />,
         ]}
+        style={styles}
       >
         <FrameContextConsumer>
           {// Callback is invoked with iframe's window and document instances
           ({ document, window }) => {
             // Render Children
             return (
-              <div className={"my-extension"}>
-                <h1>Hello world - My first Extension</h1>
+              <div className={"hyperlink-container"}>
+                <App />
               </div>
             );
           }}
@@ -34,7 +43,7 @@ class Main extends React.Component {
 }
 
 const app = document.createElement("div");
-app.id = "my-extension-root";
+app.id = "hyperlink-root";
 
 document.body.appendChild(app);
 ReactDOM.render(<Main />, app);

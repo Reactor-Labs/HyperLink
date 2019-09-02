@@ -1,9 +1,9 @@
 /* src/content.css */
 
-.my-extension {
+.hyperlink-container {
   padding: 20px;
 }
 
-.my-extension h1 {
+.hyperlink-container h1 {
   color: #000;
 }
