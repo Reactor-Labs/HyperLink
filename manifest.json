@@ -1,0 +1,17 @@
+{
+  "name": "HyperLink",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "author": "Buu Nguyen",
+  "description": "Code tree for GitHub",
+  "homepage_url": "https://github.com/buunguyen/octotree",
+  "icons": {
+    "128": "icons/icon128.png"
+  },
+  "permissions": ["<all_urls>", "storage"],
+  "web_accessible_resources": ["*.woff2"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  }
+}
