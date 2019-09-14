@@ -1,0 +1,18 @@
+* {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.hyperlink_sidebar {
+  width: 200px;
+  height: 100px;
+}
+
+/* a.hyperlink_toggle {
+}
+
+a.hyperlink_toggle .popup {
+}
+
+a.hyperlink_toggle .popup > .arrow {
+} */
